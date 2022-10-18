@@ -43,7 +43,7 @@ class step2 :AppCompatActivity() {
         val mail = intent.getStringExtra("Email")
         val gender = intent.getStringExtra("Gender")
         var bundle :Bundle ?=intent.extras
-        var imageid:Int = bundle!!.getInt("image")
+        val imageURI= intent.getStringExtra("image")
         btnSubmit!!.setOnClickListener {
 
 
@@ -78,7 +78,7 @@ class step2 :AppCompatActivity() {
                 else -> "None"
             }
 
-            println("--------------------------------------"+imageid)
+            println("--------------------------------------"+imageURI)
             intent.putExtra("Name", name)
             intent.putExtra("Age", age)
             intent.putExtra("Email", mail)
@@ -88,9 +88,10 @@ class step2 :AppCompatActivity() {
             intent.putExtra("Flutter", seekBarFlutter!!.progress.toFloat())
             intent.putExtra("Language", language)
             intent.putExtra("Hobbies", hobbies)
-            intent.putExtra("image",imageid)
+            intent.putExtra("image",imageURI)
 
             startActivity(intent)
+            finish()
         }
 
     }

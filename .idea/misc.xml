@@ -3,8 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Mega-PC/AndroidStudioProjects/CurriculumVitaeV2 -p2/app/src/main/res/drawable/gradiant_overlay.xml" value="0.206" />
+        <entry key="..\:/Users/Mega-PC/AndroidStudioProjects/CurriculumVitaeV2 -p2/app/src/main/res/drawable/ic_bars.xml" value="0.206" />
         <entry key="..\:/Users/Mega-PC/AndroidStudioProjects/CurriculumVitaeV2 -p2/app/src/main/res/layout/activity_main.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/Mega-PC/AndroidStudioProjects/CurriculumVitaeV2 -p2/app/src/main/res/layout/carrer_activity.xml" value="0.2" />
+        <entry key="..\:/Users/Mega-PC/AndroidStudioProjects/CurriculumVitaeV2 -p2/app/src/main/res/layout/carrertoolbar.xml" value="0.1" />
         <entry key="..\:/Users/Mega-PC/AndroidStudioProjects/CurriculumVitaeV2 -p2/app/src/main/res/layout/cv_result.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/Mega-PC/AndroidStudioProjects/CurriculumVitaeV2 -p2/app/src/main/res/layout/education_single_item.xml" value="0.21891891891891893" />
+        <entry key="..\:/Users/Mega-PC/AndroidStudioProjects/CurriculumVitaeV2 -p2/app/src/main/res/layout/experience_single_item.xml" value="0.4" />
+        <entry key="..\:/Users/Mega-PC/AndroidStudioProjects/CurriculumVitaeV2 -p2/app/src/main/res/layout/fragment_education.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/Mega-PC/AndroidStudioProjects/CurriculumVitaeV2 -p2/app/src/main/res/layout/fragment_experience.xml" value="0.20765765765765765" />
         <entry key="..\:/Users/Mega-PC/AndroidStudioProjects/CurriculumVitaeV2 -p2/app/src/main/res/layout/fragment_hobbiesfragment.xml" value="0.2" />
         <entry key="..\:/Users/Mega-PC/AndroidStudioProjects/CurriculumVitaeV2 -p2/app/src/main/res/layout/fragment_infofragment.xml" value="0.264" />
         <entry key="..\:/Users/Mega-PC/AndroidStudioProjects/CurriculumVitaeV2 -p2/app/src/main/res/layout/fragment_languagefragment.xml" value="0.264" />

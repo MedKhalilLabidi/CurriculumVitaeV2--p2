@@ -1,19 +1,23 @@
 package com.example.curriculumvitaev2
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.*
 import androidx.fragment.app.Fragment
+import androidx.appcompat.widget.Toolbar
+import java.net.URI
 
 class cv_result: AppCompatActivity(){
 
     private lateinit var btnSkills: Button
     private lateinit var btnHobbies: Button
     private lateinit var btnLanguages: Button
+    private lateinit var btnCareer: Button
 
-private lateinit var toolbar: Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -25,6 +29,7 @@ private lateinit var toolbar: Toolbar
 
         btnHobbies = findViewById(R.id.btnHobbies)
         btnLanguages = findViewById(R.id.btnLanguages)
+
         var bundle :Bundle ?=intent.extras
         var fullname = bundle!!.getString("Name")
         var email = bundle!!.getString("Email")
@@ -33,19 +38,24 @@ private lateinit var toolbar: Toolbar
         var flutter = bundle!!.getFloat("Flutter")
         var Language= bundle!!.getString("Language")
         var hobbies= bundle!!.getString("Hobbies")
-        var imageid:Int = bundle!!.getInt("image")
+        var imageUri = Uri.parse(bundle!!.getString("image"))
         val imageView:ImageView = findViewById(R.id.pf2)
-        //imageView.setImageResource(imageID)
+        imageView.setImageURI(imageUri)
         val tname : TextView = findViewById(R.id.tname)
         tname.setText( fullname)
 
         val temail : TextView = findViewById(R.id.temail)
         temail.setText(email)
 
+        val toolbar: Toolbar = findViewById(R.id.app_bar)
+        setSupportActionBar(toolbar)
         val fragmentskills=skillsfragment.newInstance(android/100,ios/100,flutter/100)
        val fragmentlanguage=languagefragment.newInstance(Language.toString(),"")
         val fragmenthobbies=hobbiesfragment.newInstance(hobbies.toString(),"")
-        // Attaching the layout to the toolbar object
+        toolbar.setNavigationOnClickListener(){
+            finish()
+
+        }
         btnSkills.setOnClickListener{
             changeFragment(fragmentskills,"Skills")
         }
@@ -56,7 +66,12 @@ private lateinit var toolbar: Toolbar
             changeFragment(fragmentlanguage, "Languages")
         }
         supportFragmentManager.beginTransaction().add(R.id.fragment_container,fragmentskills).commit()
+        btnCareer = findViewById(R.id.btnCareer)
 
+        btnCareer.setOnClickListener {
+            val intent = Intent(this,carrerActivity::class.java)
+            startActivity(intent)
+        }
 
     }
     private fun changeFragment(fragment: Fragment, name: String) {
@@ -83,7 +98,7 @@ private lateinit var toolbar: Toolbar
         when(item.itemId){
 
 
-
+            R.id.info -> changeFragment(infofragment(), "info")
 
         }
         return super.onOptionsItemSelected(item)

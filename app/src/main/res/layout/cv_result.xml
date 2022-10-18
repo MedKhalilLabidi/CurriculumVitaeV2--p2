@@ -7,10 +7,13 @@
 
 
 
-    <include
-        android:id="@+id/toolbar1"
-        layout="@layout/toolbar" />
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <LinearLayout
@@ -18,10 +21,9 @@
         android:layout_width="384dp"
         android:layout_height="249dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar1"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintVertical_bias="0.029">
 
         <ImageView
@@ -76,6 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/colorSecondaryLight"
             android:gravity="center"
             android:text="SKILLS"
             android:textStyle="bold" />
@@ -88,6 +91,7 @@
             android:layout_marginEnd="2dp"
             android:layout_weight="1"
             android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/colorSecondaryLight"
             android:gravity="center"
             android:text="HOBBIES"
             android:textStyle="bold" />
@@ -98,6 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/colorSecondaryLight"
             android:gravity="center"
             android:text="LANGUAGES"
             android:textStyle="bold" />
@@ -108,8 +113,8 @@
 
     <LinearLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="376dp"
-        android:layout_height="319dp"
+        android:layout_width="354dp"
+        android:layout_height="278dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/background_border"
         app:layout_constraintEnd_toEndOf="parent"
@@ -120,10 +125,23 @@
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="278dp" />
 
 
     </LinearLayout>
 
+    <Button
+
+        android:id="@+id/btnCareer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="36dp"
+        android:text="MY CAREER"
+        android:textColor="@color/colorSecondaryLight"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

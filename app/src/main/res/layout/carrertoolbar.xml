@@ -6,12 +6,12 @@
     android:layout_height="wrap_content">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/app_bar"
+        android:id="@+id/app_bar2"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        app:navigationIcon="@drawable/ic_baseline_home_24"
-        app:menu="@menu/menu_toolbar"
-        app:title="Your Resume"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+
+        app:title="your Carrer"
         app:titleTextColor="@color/colorSecondaryLight"/>
 
 </com.google.android.material.appbar.AppBarLayout>

@@ -6,10 +6,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Patterns.EMAIL_ADDRESS
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.RadioButton
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputLayout
 
@@ -49,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         female = findViewById<RadioButton>(R.id.female)
 
         val pickImage = 100
-        var imageUri: Uri? = null
+
         imageview = findViewById(R.id.pf1)
         imageview.setOnClickListener {
             val gallery = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
@@ -71,14 +68,14 @@ class MainActivity : AppCompatActivity() {
 
 
 
-                println("+++++++++++++++++++++++++++++++++++++++++++++++++"+R.id.pf1)
+
 
                 val intent = Intent(this, step2::class.java)
                 intent.putExtra("Name", fullname)
                 intent.putExtra("Email", mail)
                 intent.putExtra("Age", age2)
                 intent.putExtra("Gender", gender)
-                intent.putExtra("image", R.id.pf1)
+                intent.putExtra("image", imageUri.toString())
                 startActivity(intent)
             }
 
@@ -115,7 +112,10 @@ class MainActivity : AppCompatActivity() {
             oAge?.error = null
             c3 = true;
         }
-        if (c1 && c2 && c3) {
+        if (imageUri==null) {
+            Toast.makeText(this, "select an image !", Toast.LENGTH_SHORT).show()
+        }
+        if (c1 && c2 && c3 && imageUri!=null) {
             return true
         } else return false
     }
